@@ -7,6 +7,12 @@ build:
 build-casper:
 	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./casper --output ./tmp
 
+build-mycasper:
+	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./zbl-casper --output ./tmp
+
+test-mycasper:
+	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./zbl-casper --output ./mycasper
+
 lint:
 	fixjsstyle $(GJSLINT) -r .
 	gjslint $(GJSLINT) -r .
