@@ -4,11 +4,11 @@ build:
 	node ./bin/ghost-render --settings settings.json
 
 build-mycasper:
-	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./zbl-casper --output ./tmp
-	cd ./tmp && python -m SimpleHTTPServer 5000
+	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./zbl-casper --output ./doodles
+	cd ./doodles && python -m SimpleHTTPServer 5000
 
 run-server:
-	cd ./tmp && python -m SimpleHTTPServer 5000
+	cd ./doodles && python -m SimpleHTTPServer 5000
 
 test-mycasper:
 	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./zbl-casper --output ./mycasper
