@@ -7,11 +7,13 @@ build-mycasper:
 	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./zbl-casper --output ./doodles
 	cd ./doodles && python -m SimpleHTTPServer 5000
 
+
 run-server:
 	cd ./doodles && python -m SimpleHTTPServer 5000
 
 test-mycasper:
-	node ./bin/ghost-render --input ./blog/ --settings settings.json --theme ./zbl-casper --output ./mycasper
+	node ./bin/ghost-render --input ./blog-test/ --settings settings.json --theme ./zbl-casper --output ./mycasper
+	cd ./mycasper && python -m SimpleHTTPServer 5000
 
 lint:
 	fixjsstyle $(GJSLINT) -r .
