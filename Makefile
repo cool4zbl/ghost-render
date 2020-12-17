@@ -6,7 +6,7 @@ build:
 	node ./bin/ghost-render --settings settings.json
 
 build-mycasper:
-	node ./bin/ghost-render --input ../blog/ --settings settings.json --theme ../casper --output ../$(DIR_NAME)
+	node ./bin/ghost-render --input ../blog/ --settings ../blog/settings.json --theme ../casper --output ../$(DIR_NAME)
 	cd ../$(DIR_NAME) && python -m SimpleHTTPServer 5000
 
 run-server:
